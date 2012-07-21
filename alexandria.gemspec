@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Alexandria::VERSION
   s.authors     = ["Giannis Tsagatakis"]
   s.email       = ["jtsagata@gmail.com"]
-  s.homepage    = "github.com/jtsagata/alexandria"
+  s.homepage    = "http://github.com/jtsagata/alexandria"
   s.summary     = "Toys for the greek language."
   s.description = "Provides to_greeklish method for pretty url."
 

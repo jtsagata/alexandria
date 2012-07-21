@@ -1,3 +1,8 @@
 = Alexandria
 
-This project rocks and uses MIT-LICENSE.
+Provides a simple to_greeklish method on strings. The target case fros this
+game is friendly URL's
+
+For better results downcase the string first
+
+slug = text.mb_chars.downcase.to_greeklish

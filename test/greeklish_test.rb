@@ -1,7 +1,8 @@
 #encoding: utf-8
-require 'test_helper'
+require "test/unit"
+require "alexandria"
 
-class GreekLishTest < ActiveSupport::TestCase
+class GreekLishTest <Test::Unit::TestCase
 
   def greeklish_me(examples)
     examples.each do |text,greeklish|
@@ -10,7 +11,8 @@ class GreekLishTest < ActiveSupport::TestCase
   end
 
   # Words with 'αυ' is hard to get it right
-  test "Words with 'αυ'." do
+  # "Words with 'αυ'."
+  def test_au
     greeklish_me( {
       "ταυ"        => "taf",
       "αυθεντικός" => "afthentikos",
@@ -35,7 +37,8 @@ class GreekLishTest < ActiveSupport::TestCase
     })
   end
 
-  test "Words with 'ευ'." do
+  # "Words with 'ευ'."
+  def test_eu
     greeklish_me( {
       "ευρώπη"     => "evropi",
       "ευφορία"    => "eforia",
@@ -48,7 +51,8 @@ class GreekLishTest < ActiveSupport::TestCase
     })
   end
 
-  test "Words with double vowels." do
+  # test "Words with double vowels." do
+  def test_dd
     greeklish_me( {
       "αηδόνι"     => "aidoni",
       "κελαηδάει"  => "kelaidai",
@@ -60,7 +64,8 @@ class GreekLishTest < ActiveSupport::TestCase
     })
   end
 
-  test "Words with 'σ' that sounds like 'z'." do
+  # test "Words with 'σ' that sounds like 'z'." do
+  def test_sz
     greeklish_me( {
       "σβούρα"     => "zvura",
       "σμήνος"     => "zminos",
@@ -69,7 +74,8 @@ class GreekLishTest < ActiveSupport::TestCase
   end
 
 
-  test "Words with double letters." do
+  # test "Words with double letters." do
+  def test_ddd
     greeklish_me( {
       "σαββάτο"  => "savato",
       "αλλού"    => "alu",
@@ -78,7 +84,8 @@ class GreekLishTest < ActiveSupport::TestCase
     })
   end
 
-  test "Words with 'αι'." do
+  # test "Words with 'αι'." do
+  def test_ai
     greeklish_me( {
       "αίθουσα"    => "ethusa",
       "έπαινος"    => "epenos",
@@ -89,7 +96,8 @@ class GreekLishTest < ActiveSupport::TestCase
     })
   end
 
-  test "Words with 'ηυ'." do
+  #test "Words with 'ηυ'." do
+  def test_hi
     greeklish_me( {
       "εφηύρα" => "efivra",
       "ηυξημένος" => "ifksimenos",
@@ -97,7 +105,8 @@ class GreekLishTest < ActiveSupport::TestCase
   end
 
 
-  test "Greeklish examples" do
+  #test "Greeklish examples" do
+  def test_misc
     greeklish_me( {
       #"Πάγκαλος" => "Malakas",
       "καλημέρα" => "kalimera",

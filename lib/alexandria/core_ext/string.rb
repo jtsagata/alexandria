@@ -123,7 +123,6 @@ class Greeklish
 
 
     def self.to_greeklish(text)
-      #text = text.mb_chars.downcase
       Greeklish::RULES.each do |from,to|
         text = text.gsub(from,to)
       end
